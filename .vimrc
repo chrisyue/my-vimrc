@@ -24,6 +24,7 @@ Bundle 'StanAngeloff/php.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'Townk/vim-autoclose'
 Bundle 'vim-scripts/matrix.vim--Yang'
+Bundle 'vim-scripts/XDebug-DBGp-client-for-PHP'
 
 " github vim scripts mirrors
 Bundle 'vim-scripts/matchit.zip'
@@ -31,3 +32,5 @@ Bundle 'vim-scripts/matchit.zip'
 filetype plugin indent on
 
 colorscheme pablo
+
+" let g:debuggerPort = 10000
