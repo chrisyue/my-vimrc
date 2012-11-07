@@ -33,4 +33,6 @@ filetype plugin indent on
 
 colorscheme pablo
 
+autocmd BufRead,BufNewFile *.twig setfiletype html
+
 " let g:debuggerPort = 10000
