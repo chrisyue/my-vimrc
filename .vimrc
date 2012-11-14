@@ -25,6 +25,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'Townk/vim-autoclose'
 Bundle 'vim-scripts/matrix.vim--Yang'
 Bundle 'vim-scripts/XDebug-DBGp-client-for-PHP'
+Bundle 'pangloss/vim-javascript'
 
 " github vim scripts mirrors
 Bundle 'vim-scripts/matchit.zip'
