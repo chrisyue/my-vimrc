@@ -23,16 +23,22 @@ Bundle 'mutewinter/nginx.vim'
 Bundle 'StanAngeloff/php.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'Townk/vim-autoclose'
-Bundle 'vim-scripts/matrix.vim--Yang'
 Bundle 'vim-scripts/XDebug-DBGp-client-for-PHP'
+
+" syntax
+Bundle 'evidens/vim-twig'
 Bundle 'pangloss/vim-javascript'
 
 " github vim scripts mirrors
 Bundle 'vim-scripts/matchit.zip'
+Bundle 'vim-scripts/L9'
+Bundle 'vim-scripts/FuzzyFinder'
 
 filetype plugin indent on
 
 colorscheme pablo
+
+set number 
 
 autocmd BufRead,BufNewFile *.twig setfiletype html
 
