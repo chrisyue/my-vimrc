@@ -26,6 +26,7 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'vim-scripts/XDebug-DBGp-client-for-PHP'
 Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'docteurklein/vim-symfony'
+Bundle 'shawncplus/phpcomplete.vim'
 
 " syntax
 Bundle 'evidens/vim-twig'
@@ -36,11 +37,11 @@ Bundle 'vim-scripts/matchit.zip'
 Bundle 'vim-scripts/L9'
 Bundle 'vim-scripts/FuzzyFinder'
 
+filetype plugin indent on
+
 set foldmarker={,}
 set foldmethod=marker
 set number 
-
-filetype plugin indent on
 
 colorscheme pablo
 
@@ -52,7 +53,6 @@ noremap <Leader>e :call PhpExpandClass()<CR>
 
 let g:symfony_enable_shell_mapping=1
 
-autocmd BufRead,BufNewFile *.twig setfiletype html
 autocmd BufRead,BufNewFile *.yml  set foldmethod=indent
 
 " let g:debuggerPort = 10000

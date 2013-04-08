@@ -5,7 +5,6 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set ignorecase
-set smartcase
 set hidden
 set incsearch
 set laststatus=2
@@ -14,4 +13,5 @@ set wildmenu
 set wildmode=list:longest
 set completeopt=longest,menu
 set noswapfile
+set scrolloff=999
 set t_Co=256
