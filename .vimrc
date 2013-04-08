@@ -13,8 +13,8 @@ Bundle 'scrooloose/nerdcommenter'
 " those 4 are all for snipmate-snippets
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
-Bundle 'chrisyue/snipmate-snippets'
 Bundle 'garbas/vim-snipmate'
+Bundle 'chrisyue/vim-snippets'
 
 Bundle 'gregsexton/MatchTag'
 Bundle 'othree/html5.vim'
@@ -26,6 +26,7 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'vim-scripts/XDebug-DBGp-client-for-PHP'
 Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'docteurklein/vim-symfony'
+Bundle 'basilgor/vim-autotags'
 
 " syntax
 Bundle 'evidens/vim-twig'
