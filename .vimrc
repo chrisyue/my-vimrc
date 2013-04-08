@@ -26,7 +26,6 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'vim-scripts/XDebug-DBGp-client-for-PHP'
 Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'docteurklein/vim-symfony'
-Bundle 'basilgor/vim-autotags'
 
 " syntax
 Bundle 'evidens/vim-twig'
@@ -50,6 +49,8 @@ inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
 noremap <Leader>u :call PhpInsertUse()<CR>
 inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
 noremap <Leader>e :call PhpExpandClass()<CR>
+
+let g:symfony_enable_shell_mapping=1
 
 autocmd BufRead,BufNewFile *.twig setfiletype html
 autocmd BufRead,BufNewFile *.yml  set foldmethod=indent
