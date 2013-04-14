@@ -41,7 +41,6 @@ filetype plugin indent on
 
 set foldmarker={,}
 set foldmethod=marker
-set number 
 
 colorscheme pablo
 
@@ -53,6 +52,6 @@ noremap <Leader>e :call PhpExpandClass()<CR>
 
 let g:symfony_enable_shell_mapping=1
 
-autocmd BufRead,BufNewFile *.yml  set foldmethod=indent
+autocmd BufRead,BufNewFile *.yml set foldmethod=indent
 
 " let g:debuggerPort = 10000

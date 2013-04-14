@@ -1,4 +1,4 @@
-"set number
+set number
 set cindent
 set tabstop=4
 set softtabstop=4
@@ -11,6 +11,7 @@ set laststatus=2
 set foldmethod=marker
 set wildmenu
 set wildmode=list:longest
+set wildignorecase
 set completeopt=longest,menu
 set noswapfile
 set scrolloff=999
