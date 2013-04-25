@@ -39,6 +39,25 @@ Bundle 'vim-scripts/FuzzyFinder'
 
 filetype plugin indent on
 
+" common configuration
+set number
+set cindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set ignorecase
+set hidden
+set incsearch
+set laststatus=2
+set wildmenu
+set wildmode=list:longest
+set wildignorecase
+set completeopt=longest,menu,preview
+set noswapfile
+set scrolloff=999
+set t_Co=256
+set iskeyword-=-
 set foldmarker={,}
 set foldmethod=marker
 
@@ -49,7 +68,5 @@ noremap <Leader>u :call PhpInsertUse()<CR>
 noremap <Leader>e :call PhpExpandClass()<CR>
 
 let g:symfony_enable_shell_mapping=1
-
-autocmd BufRead,BufNewFile *.yml set foldmethod=indent
 
 " let g:debuggerPort = 10000
