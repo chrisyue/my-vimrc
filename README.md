@@ -6,7 +6,8 @@ my vimrc in gentoo
 HOW TO USE
 ----------
 
-    cp * ~/ -R
+    cp .vimrc ~/
+    cp .vim ~/ -R
 
 then install [vundle](https://github.com/gmarik/vundle)
 
