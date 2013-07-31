@@ -1,7 +1,7 @@
-vimrc-in-gentoo
+vimrc-for-linux
 ===============
 
-my vimrc in gentoo
+my vimrc for linux
 
 HOW TO USE
 ----------
