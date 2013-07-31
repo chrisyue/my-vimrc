@@ -6,13 +6,17 @@ my vimrc in gentoo
 HOW TO USE
 ----------
 
+clone this repository
+
+copy .vimrc and .vim to your home directory
+
     cp .vimrc ~/
     cp .vim ~/ -R
 
-then install [vundle](https://github.com/gmarik/vundle)
+install [vundle](https://github.com/gmarik/vundle)
 
     $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
-and run vim, then install plugins:
+run vim, and type the following command to install all plugins:
 
     :BundleInstall
