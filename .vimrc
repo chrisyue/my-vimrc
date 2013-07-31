@@ -13,7 +13,8 @@ Bundle 'scrooloose/nerdcommenter'
 " those 4 are all for snipmate-snippets
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
+"Bundle 'garbas/vim-snipmate'
+Bundle 'SirVer/ultisnips'
 Bundle 'chrisyue/vim-snippets'
 
 Bundle 'gregsexton/MatchTag'
