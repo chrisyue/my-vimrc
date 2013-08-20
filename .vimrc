@@ -16,7 +16,6 @@ Bundle 'tomtom/tlib_vim'
 "Bundle 'garbas/vim-snipmate'
 Bundle 'SirVer/ultisnips'
 Bundle 'chrisyue/vim-snippets'
-
 Bundle 'gregsexton/MatchTag'
 Bundle 'othree/html5.vim'
 Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
@@ -28,6 +27,7 @@ Bundle 'vim-scripts/XDebug-DBGp-client-for-PHP'
 Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'docteurklein/vim-symfony'
 Bundle 'shawncplus/phpcomplete.vim'
+Bundle '2072/PHP-Indenting-for-VIm'
 
 " syntax
 Bundle 'evidens/vim-twig'
@@ -69,5 +69,6 @@ noremap <Leader>u :call PhpInsertUse()<CR>
 noremap <Leader>e :call PhpExpandClass()<CR>
 
 let g:symfony_enable_shell_mapping=1
+let g:UltiSnipsDontReverseSearchPath=1
 
 " let g:debuggerPort = 10000
