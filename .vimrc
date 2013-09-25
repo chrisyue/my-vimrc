@@ -28,10 +28,13 @@ Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'docteurklein/vim-symfony'
 Bundle 'shawncplus/phpcomplete.vim'
 Bundle '2072/PHP-Indenting-for-VIm'
+Bundle 'junegunn/vim-easy-align'
 
 " syntax
 Bundle 'evidens/vim-twig'
 Bundle 'pangloss/vim-javascript'
+
+Bundle 'scrooloose/syntastic'
 
 " github vim scripts mirrors
 Bundle 'vim-scripts/matchit.zip'
@@ -68,7 +71,18 @@ colorscheme pablo
 noremap <Leader>u :call PhpInsertUse()<CR>
 noremap <Leader>e :call PhpExpandClass()<CR>
 
+vnoremap <silent> <Enter> :EasyAlign<cr>
+
+" w!! to sudo save
+cmap w!! %!sudo tee > /dev/null %
+
+autocmd BufWritePost *.php execute 'silent !php-cs-fixer fix % > /dev/null'
+autocmd BufWritePost *.php execute 'e'
+autocmd BufWritePost *.php execute 'syntax on'
+
 let g:symfony_enable_shell_mapping=1
 let g:UltiSnipsDontReverseSearchPath=1
+
+let g:syntastic_php_checkers=['php', 'phpmd']
 
 " let g:debuggerPort = 10000
