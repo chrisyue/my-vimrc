@@ -13,9 +13,9 @@ Bundle 'scrooloose/nerdcommenter'
 " those 4 are all for snipmate-snippets
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
-"Bundle 'garbas/vim-snipmate'
 Bundle 'SirVer/ultisnips'
 Bundle 'chrisyue/vim-snippets'
+"Bundle 'garbas/vim-snipmate' " original
 Bundle 'gregsexton/MatchTag'
 Bundle 'othree/html5.vim'
 Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
@@ -29,6 +29,7 @@ Bundle 'docteurklein/vim-symfony'
 Bundle 'shawncplus/phpcomplete.vim'
 Bundle '2072/PHP-Indenting-for-VIm'
 Bundle 'junegunn/vim-easy-align'
+Bundle 'skwp/vim-html-escape'
 
 " syntax
 Bundle 'evidens/vim-twig'
@@ -61,7 +62,7 @@ set completeopt=longest,menu,preview
 set noswapfile
 set scrolloff=999
 set t_Co=256
-set iskeyword-=-
+set iskeyword-=-$
 set foldmarker={,}
 set foldmethod=marker
 
@@ -76,9 +77,9 @@ vnoremap <silent> <Enter> :EasyAlign<cr>
 " w!! to sudo save
 cmap w!! %!sudo tee > /dev/null %
 
-autocmd BufWritePost *.php execute 'silent !php-cs-fixer fix % > /dev/null'
-autocmd BufWritePost *.php execute 'e'
-autocmd BufWritePost *.php execute 'syntax on'
+autocmd BufWritePost *.php,*.twig,*.yml execute 'silent !php-cs-fixer fix % > /dev/null'
+autocmd BufWritePost *.php,*.twig,*.yml execute 'e'
+autocmd BufWritePost *.php,*.twig,*.yml execute 'syntax on'
 
 let g:symfony_enable_shell_mapping=1
 let g:UltiSnipsDontReverseSearchPath=1
