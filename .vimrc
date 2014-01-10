@@ -48,6 +48,9 @@ Bundle 'vim-scripts/matchit.zip'
 Bundle 'vim-scripts/L9'
 Bundle 'vim-scripts/FuzzyFinder'
 
+" theme
+Bundle 'chriskempson/vim-tomorrow-theme'
+
 filetype plugin indent on
 
 " common configuration
@@ -73,7 +76,7 @@ set foldmarker={,}
 set foldmethod=marker
 set hlsearch
 
-colorscheme pablo
+colorscheme Tomorrow-Night
 
 " for vim-php-namespace
 noremap <Leader>u :call PhpInsertUse()<CR>
