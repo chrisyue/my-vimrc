@@ -55,6 +55,7 @@ Bundle 'vim-scripts/FuzzyFinder'
 filetype plugin indent on
 
 " common configuration
+syntax on
 set number
 set cindent
 set tabstop=5
