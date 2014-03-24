@@ -56,6 +56,7 @@ filetype plugin indent on
 
 " common configuration
 syntax on
+set backspace=indent,eol,start
 set number
 set cindent
 set tabstop=5
