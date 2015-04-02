@@ -78,6 +78,7 @@ set listchars=tab:\ ·,eol:¬,trail:·,extends:»,precedes:«
 
 if has('gui_running')
     set guioptions=cMg
+    set guifont=DejaVu\ Sans\ Mono\ 8
 endif
 
 set wildmenu
@@ -93,14 +94,12 @@ Plugin 'gmarik/vundle'
 
 " Colorscheme
 Plugin 'gmarik/ingretu'
-if has("gui_running")
-    colorscheme ingretu
-endif
+colorscheme ingretu
 
 " code generate
 Plugin 'SirVer/ultisnips'
-" Plugin 'chrisyue/my-snips'
-Plugin 'chrisyue/vim-snippets'
+Plugin 'chrisyue/my-snips'
+" Plugin 'chrisyue/vim-snippets'
 
 " expanding html abbreviations, like zencode
 Plugin 'mattn/emmet-vim' 
@@ -166,6 +165,8 @@ Plugin 'tpope/vim-unimpaired'
 
 " status bar
 Plugin 'bling/vim-airline'
+let g:airline_left_sep=''
+let g:airline_right_sep=''
 
 " W to sudo save
 Bundle 'gmarik/sudo-gui.vim'
@@ -183,4 +184,5 @@ let g:UltiSnipsDontReverseSearchPath=1
 
 let g:PHP_vintage_case_default_indent=1
 
-let g:NERDTreeWinSize=50
+let g:NERDTreeWinSize=60
+let g:NERDTreeAutoDeleteBuffer=1
