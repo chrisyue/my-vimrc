@@ -4,7 +4,7 @@ scriptencoding utf-8
 set encoding=utf-8
 
 set history=256
-set timeoutlen=250
+set timeoutlen=500
 "set clipboard+=unnamed " this is for windows
 set shiftround
 
@@ -20,7 +20,7 @@ set noswapfile
 
 set hidden
 set hlsearch
-set ignorecase
+" set ignorecase " because it effects definition jump
 set smartcase
 set incsearch
 
@@ -35,7 +35,7 @@ set shiftwidth=4
 set expandtab
 set smarttab
 
-set backspace=indent,eol,start
+set backspace+=indent,eol,start
 
 set autoindent
 set cindent
@@ -66,12 +66,15 @@ set showcmd
 
 set foldenable
 set foldmethod=indent
-set foldlevel=100
+set foldlevel=1
 
 set virtualedit=block
 
 set splitbelow
 set splitright
+
+set cursorline
+" set cursorcolumn
 
 set list
 set listchars=tab:\ ·,eol:¬,trail:·,extends:»,precedes:«
@@ -99,7 +102,6 @@ colorscheme ingretu
 " code generate
 Plugin 'SirVer/ultisnips'
 Plugin 'chrisyue/my-snips'
-" Plugin 'chrisyue/vim-snippets'
 
 " expanding html abbreviations, like zencode
 Plugin 'mattn/emmet-vim' 
@@ -149,7 +151,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'gregsexton/MatchTag'
 Plugin 'majutsushi/tagbar'
 Plugin 'arnaud-lb/vim-php-namespace'
-Plugin 'docteurklein/vim-symfony'
 Plugin 'mutewinter/swap-parameters'
 Plugin 'vim-scripts/lastpos.vim'
 Plugin 'Townk/vim-autoclose'
