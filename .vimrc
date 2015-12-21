@@ -113,9 +113,9 @@ Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'othree/html5.vim'
 Plugin 'mutewinter/nginx.vim'
 Plugin 'StanAngeloff/php.vim'
-Plugin 'evidens/vim-twig'
 Plugin 'groenewege/vim-less'
 Plugin 'hail2u/vim-css3-syntax'
+Plugin 'evidens/vim-twig'
 
 " FuzzyFinder
 Plugin 'L9'
@@ -154,6 +154,7 @@ Plugin 'arnaud-lb/vim-php-namespace'
 Plugin 'mutewinter/swap-parameters'
 Plugin 'vim-scripts/lastpos.vim'
 Plugin 'Townk/vim-autoclose'
+Plugin 'kien/ctrlp.vim'
 
 " comment
 Plugin 'tomtom/tlib_vim'
