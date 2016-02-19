@@ -46,7 +46,7 @@ set cinwords=if,else,while,do,for,switch,case
 
 syntax on
 
-set mouse=a
+" set mouse=a
 set mousehide
 
 set number
