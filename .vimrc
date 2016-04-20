@@ -20,8 +20,9 @@ set noswapfile
 
 set hidden
 set hlsearch
-" set ignorecase " because it effects definition jump
+set ignorecase
 set smartcase
+set tagcase=match
 set incsearch
 
 let g:is_posix=1
@@ -54,7 +55,7 @@ set showmatch
 set matchtime=2
 
 set wildmode=longest,list
-set completeopt+=preview
+set completeopt=menuone,longest
 
 set novisualbell
 set noerrorbells
@@ -73,7 +74,8 @@ set virtualedit=block
 set splitbelow
 set splitright
 
-set cursorline
+"they'll slow vim down
+" set cursorline
 " set cursorcolumn
 
 set list
@@ -116,6 +118,8 @@ Plugin 'StanAngeloff/php.vim'
 Plugin 'groenewege/vim-less'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'evidens/vim-twig'
+
+let mapleader=','
 
 " FuzzyFinder
 Plugin 'L9'
@@ -163,7 +167,6 @@ nnoremap // :TComment<CR>
 vnoremap // :TComment<CR>
 
 Plugin 'vim-scripts/matchit.zip'
-Plugin 'tpope/vim-unimpaired'
 
 " status bar
 Plugin 'bling/vim-airline'
