@@ -121,28 +121,6 @@ Plugin 'evidens/vim-twig'
 
 let mapleader=','
 
-" FuzzyFinder
-Plugin 'L9'
-Plugin 'FuzzyFinder'
-let g:fuf_modesDisable = []
-nnoremap <leader>h :FufHelp<CR>
-nnoremap <leader>1 :FufTagWithCursorWord<CR>
-nnoremap <leader>11 :FufTag<CR>
-nnoremap <leader>2 :FufFileWithCurrentBufferDir<CR>
-nnoremap <leader>22 :FufFile<CR>
-nnoremap <leader>3 :FufBuffer<CR>
-nnoremap <leader>4 :FufDirWithCurrentBufferDir<CR>
-nnoremap <leader>44 :FufDir<CR>
-nnoremap <leader>5 :FufBufferTag<CR>
-nnoremap <leader>55 :FufBufferTagAll<CR>
-nnoremap <leader>6 :FufMruFile<CR>
-nnoremap <leader>7 :FufLine<CR>
-nnoremap <leader>8 :FufChangeList<CR>
-nnoremap <leader>9 :FufTaggedFile<CR>
-nnoremap <leader>p :FufDir ~/src/<CR>
-nnoremap <leader>ge :FufDir ~/.rvm/gems/<CR>
-nnoremap <leader>gn :vnew \| :FufFile ~/src/notes/<CR>
-
 " git
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-fugitive'
@@ -156,7 +134,6 @@ Plugin 'gregsexton/MatchTag'
 Plugin 'majutsushi/tagbar'
 Plugin 'arnaud-lb/vim-php-namespace'
 Plugin 'mutewinter/swap-parameters'
-Plugin 'vim-scripts/lastpos.vim'
 Plugin 'Townk/vim-autoclose'
 Plugin 'kien/ctrlp.vim'
 
@@ -170,14 +147,17 @@ Plugin 'vim-scripts/matchit.zip'
 
 " status bar
 Plugin 'bling/vim-airline'
-let g:airline_left_sep=''
-let g:airline_right_sep=''
+" let g:airline#extensions#tabline#enabled=1 " show buffer bar
+let g:airline_powerline_fonts=1
 
 " W to sudo save
 Bundle 'gmarik/sudo-gui.vim'
 
 " undo
 Plugin 'sjl/gundo.vim'
+
+" debug
+Plugin 'joonty/vdebug'
 
 filetype plugin indent on
 
