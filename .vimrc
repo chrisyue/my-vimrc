@@ -5,7 +5,7 @@ set encoding=utf-8
 
 set history=256
 set timeoutlen=500
-"set clipboard+=unnamed " this is for windows
+set clipboard+=unnamed " this is for windows
 set shiftround
 
 set modeline
@@ -22,7 +22,7 @@ set hidden
 set hlsearch
 set ignorecase
 set smartcase
-set tagcase=match
+" set tagcase=match
 set incsearch
 
 let g:is_posix=1
@@ -92,72 +92,72 @@ set t_Co=256
 
 filetype off
 
-set runtimepath+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Plugin 'gmarik/vundle'
+call plug#begin('~/.vim/plugged')
 
 " Colorscheme
-Plugin 'gmarik/ingretu'
-colorscheme ingretu
+Plug 'gmarik/ingretu'
 
 " code generate
-Plugin 'SirVer/ultisnips'
-Plugin 'chrisyue/my-snips'
+Plug 'SirVer/ultisnips'
+Plug 'chrisyue/my-snips'
 
 " expanding html abbreviations, like zencode
-Plugin 'mattn/emmet-vim' 
+Plug 'mattn/emmet-vim' 
 
 " use <C-O> to complete method
-Plugin 'shawncplus/phpcomplete.vim'
+Plug 'shawncplus/phpcomplete.vim'
 
 " syntax
-Plugin 'othree/html5.vim'
-Plugin 'mutewinter/nginx.vim'
-Plugin 'StanAngeloff/php.vim'
-Plugin 'groenewege/vim-less'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'evidens/vim-twig'
+Plug 'othree/html5.vim'
+Plug 'mutewinter/nginx.vim'
+Plug 'StanAngeloff/php.vim'
+Plug 'groenewege/vim-less'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'evidens/vim-twig'
 
 let mapleader=','
 
 " git
-Plugin 'tpope/vim-git'
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-fugitive'
 
 " misc
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-abolish'
-Plugin 'scrooloose/nerdtree'
-Plugin 'gregsexton/MatchTag'
-Plugin 'majutsushi/tagbar'
-Plugin 'arnaud-lb/vim-php-namespace'
-Plugin 'mutewinter/swap-parameters'
-Plugin 'Townk/vim-autoclose'
-Plugin 'kien/ctrlp.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-abolish'
+Plug 'scrooloose/nerdtree'
+Plug 'gregsexton/MatchTag'
+Plug 'majutsushi/tagbar'
+Plug 'arnaud-lb/vim-php-namespace'
+Plug 'mutewinter/swap-parameters'
+Plug 'Townk/vim-autoclose'
+Plug 'kien/ctrlp.vim'
 
 " comment
-Plugin 'tomtom/tlib_vim'
-Plugin 'tomtom/tcomment_vim'
+Plug 'tomtom/tlib_vim'
+Plug 'tomtom/tcomment_vim'
 nnoremap // :TComment<CR>
 vnoremap // :TComment<CR>
 
-Plugin 'vim-scripts/matchit.zip'
+Plug 'vim-scripts/matchit.zip'
 
 " status bar
-Plugin 'bling/vim-airline'
+Plug 'bling/vim-airline'
 " let g:airline#extensions#tabline#enabled=1 " show buffer bar
 let g:airline_powerline_fonts=1
 
 " W to sudo save
-Bundle 'gmarik/sudo-gui.vim'
+Plug 'gmarik/sudo-gui.vim'
 
 " undo
-Plugin 'sjl/gundo.vim'
+Plug 'sjl/gundo.vim'
 
 " debug
-Plugin 'joonty/vdebug'
+Plug 'joonty/vdebug'
+
+call plug#end()
+
+colorscheme ingretu
 
 filetype plugin indent on
 
