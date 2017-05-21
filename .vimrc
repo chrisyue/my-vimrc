@@ -109,6 +109,7 @@ Plug 'shawncplus/phpcomplete.vim'
 
 " syntax
 Plug 'othree/html5.vim'
+Plug 'vim-scripts/JavaScript-Indent'
 Plug 'mutewinter/nginx.vim'
 Plug 'StanAngeloff/php.vim'
 Plug 'groenewege/vim-less'
