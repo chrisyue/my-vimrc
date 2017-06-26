@@ -106,6 +106,7 @@ Plug 'mattn/emmet-vim'
 
 " use <C-O> to complete method
 Plug 'shawncplus/phpcomplete.vim'
+let g:phpcomplete_parse_docblock_comments=1
 
 " syntax
 Plug 'othree/html5.vim'
@@ -126,21 +127,39 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-abolish'
+
 Plug 'scrooloose/nerdtree'
+let g:NERDTreeWinSize=60
+let g:NERDTreeAutoDeleteBuffer=1
+
 Plug 'gregsexton/MatchTag'
 Plug 'majutsushi/tagbar'
-Plug 'arnaud-lb/vim-php-namespace'
 Plug 'mutewinter/swap-parameters'
 Plug 'Townk/vim-autoclose'
 Plug 'kien/ctrlp.vim'
+
+Plug 'craigemery/vim-autotag'
+let g:autotagCtagsCmd='ctags src'
+
+Plug 'arnaud-lb/vim-php-namespace'
+function! IPhpInsertUse()
+    call PhpInsertUse()
+    call feedkeys('a',  'n')
+endfunction
+function! IPhpExpandClass()
+    call PhpExpandClass()
+    call feedkeys('a', 'n')
+endfunction
+autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
+autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
+autocmd FileType php inoremap <Leader>e <Esc>:call IPhpExpandClass()<CR>
+autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
 
 " comment
 Plug 'tomtom/tlib_vim'
 Plug 'tomtom/tcomment_vim'
 nnoremap // :TComment<CR>
 vnoremap // :TComment<CR>
-
-Plug 'vim-scripts/matchit.zip'
 
 " status bar
 Plug 'bling/vim-airline'
@@ -162,13 +181,6 @@ colorscheme ingretu
 
 filetype plugin indent on
 
-" for vim-php-namespace
-noremap <Leader>u :call PhpInsertUse()<CR>
-noremap <Leader>e :call PhpExpandClass()<CR>
-
-let g:UltiSnipsDontReverseSearchPath=1
-
 let g:PHP_vintage_case_default_indent=1
 
-let g:NERDTreeWinSize=60
-let g:NERDTreeAutoDeleteBuffer=1
+set tags+=tags.vendor
