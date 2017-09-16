@@ -136,7 +136,7 @@ Plug 'gregsexton/MatchTag'
 Plug 'majutsushi/tagbar'
 Plug 'mutewinter/swap-parameters'
 Plug 'Townk/vim-autoclose'
-Plug 'kien/ctrlp.vim'
+Plug '/usr/local/opt/fzf'
 
 Plug 'craigemery/vim-autotag'
 let g:autotagCtagsCmd='ctags src'
