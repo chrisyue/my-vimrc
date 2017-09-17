@@ -138,9 +138,6 @@ Plug 'mutewinter/swap-parameters'
 Plug 'Townk/vim-autoclose'
 Plug '/usr/local/opt/fzf'
 
-Plug 'craigemery/vim-autotag'
-let g:autotagCtagsCmd='ctags src'
-
 Plug 'arnaud-lb/vim-php-namespace'
 function! IPhpInsertUse()
     call PhpInsertUse()
@@ -183,4 +180,6 @@ filetype plugin indent on
 
 let g:PHP_vintage_case_default_indent=1
 
+" tags
 set tags+=tags.vendor
+autocmd BufWritePost *.php silent execute "!ctags src"
