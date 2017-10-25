@@ -141,7 +141,7 @@ Plug '/usr/local/opt/fzf'
 Plug 'arnaud-lb/vim-php-namespace'
 function! IPhpInsertUse()
     call PhpInsertUse()
-    call feedkeys('a',  'n')
+    call feedkeys('a', 'n')
 endfunction
 function! IPhpExpandClass()
     call PhpExpandClass()
@@ -183,3 +183,6 @@ let g:PHP_vintage_case_default_indent=1
 " tags
 set tags+=tags.vendor
 autocmd BufWritePost *.php silent execute "!ctags src"
+
+" editor config
+Plug 'editorconfig/editorconfig-vim'
