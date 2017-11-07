@@ -22,7 +22,7 @@ set hidden
 set hlsearch
 set ignorecase
 set smartcase
-" set tagcase=match
+set tagcase=match
 set incsearch
 
 let g:is_posix=1
