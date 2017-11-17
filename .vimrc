@@ -182,7 +182,7 @@ let g:PHP_vintage_case_default_indent=1
 
 " tags
 set tags+=tags.vendor
-autocmd BufWritePost *.php silent execute "!ctags src"
+autocmd BufWritePost *.php silent execute "![ -f tags ] && ctags src"
 
 " editor config
 Plug 'editorconfig/editorconfig-vim'
