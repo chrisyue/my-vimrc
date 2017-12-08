@@ -5,7 +5,7 @@ set encoding=utf-8
 
 set history=256
 set timeoutlen=500
-set clipboard+=unnamed " this is for windows
+set clipboard+=unnamed
 set shiftround
 
 set modeline
@@ -47,7 +47,6 @@ set cinwords=if,else,while,do,for,switch,case
 
 syntax on
 
-" set mouse=a
 set mousehide
 
 set number
@@ -56,10 +55,6 @@ set matchtime=2
 
 set wildmode=longest,list
 set completeopt=menuone,longest
-
-set novisualbell
-set noerrorbells
-set vb t_vb=
 
 set laststatus=2
 set shortmess=atI
@@ -74,21 +69,14 @@ set virtualedit=block
 set splitbelow
 set splitright
 
-"they'll slow vim down
-" set cursorline
+set cursorline
 " set cursorcolumn
 
 set list
 set listchars=tab:\ ·,eol:¬,trail:·,extends:»,precedes:«
 
-if has('gui_running')
-    set guioptions=cMg
-    set guifont=DejaVu\ Sans\ Mono\ 8
-endif
-
 set wildmenu
 set wildignorecase
-set t_Co=256
 
 filetype off
 
@@ -104,7 +92,7 @@ Plug 'chrisyue/my-snips'
 " expanding html abbreviations, like zencode
 Plug 'mattn/emmet-vim' 
 
-" use <C-O> to complete method
+" use omni to complete method
 Plug 'shawncplus/phpcomplete.vim'
 let g:phpcomplete_parse_docblock_comments=1
 
@@ -134,23 +122,11 @@ let g:NERDTreeAutoDeleteBuffer=1
 
 Plug 'gregsexton/MatchTag'
 Plug 'majutsushi/tagbar'
-Plug 'mutewinter/swap-parameters'
+Plug 'machakann/vim-swap'
 Plug 'Townk/vim-autoclose'
 Plug '/usr/local/opt/fzf'
 
 Plug 'arnaud-lb/vim-php-namespace'
-function! IPhpInsertUse()
-    call PhpInsertUse()
-    call feedkeys('a', 'n')
-endfunction
-function! IPhpExpandClass()
-    call PhpExpandClass()
-    call feedkeys('a', 'n')
-endfunction
-autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
-autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
-autocmd FileType php inoremap <Leader>e <Esc>:call IPhpExpandClass()<CR>
-autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
 
 " comment
 Plug 'tomtom/tlib_vim'
@@ -172,17 +148,15 @@ Plug 'sjl/gundo.vim'
 " debug
 Plug 'joonty/vdebug'
 
+" editor config
+Plug 'editorconfig/editorconfig-vim'
+
 call plug#end()
 
 colorscheme ingretu
+autocmd VimEnter * NERDTree
 
 filetype plugin indent on
 
-let g:PHP_vintage_case_default_indent=1
-
 " tags
 set tags+=tags.vendor
-autocmd BufWritePost *.php silent execute "![ -f tags ] && ctags src"
-
-" editor config
-Plug 'editorconfig/editorconfig-vim'
