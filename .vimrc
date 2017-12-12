@@ -156,6 +156,8 @@ call plug#end()
 colorscheme ingretu
 autocmd VimEnter * NERDTree
 
+autocmd BufWritePost *.php silent execute "![ -f tags ] && ctags src"
+
 filetype plugin indent on
 
 " tags
