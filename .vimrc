@@ -156,9 +156,11 @@ call plug#end()
 colorscheme ingretu
 autocmd VimEnter * NERDTree
 
-autocmd BufWritePost *.php silent execute "![ -f tags ] && ctags src"
-
 filetype plugin indent on
 
 " tags
 set tags+=tags.vendor
+autocmd BufWritePost *.php silent execute "![ -d src ] && ctags src"
+
+" editor config
+Plug 'editorconfig/editorconfig-vim'
