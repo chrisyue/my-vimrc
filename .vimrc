@@ -45,8 +45,6 @@ set cinkeys-=0#
 set cinoptions=:s,ps,ts,cs
 set cinwords=if,else,while,do,for,switch,case
 
-syntax on
-
 set mousehide
 
 set number
@@ -69,7 +67,7 @@ set virtualedit=block
 set splitbelow
 set splitright
 
-set cursorline
+" set cursorline
 " set cursorcolumn
 
 set list
@@ -99,6 +97,8 @@ let g:phpcomplete_parse_docblock_comments=1
 " syntax
 Plug 'othree/html5.vim'
 Plug 'vim-scripts/JavaScript-Indent'
+Plug '2072/PHP-Indenting-for-VIm'
+Plug 'rayburgemeestre/phpfolding.vim'
 Plug 'mutewinter/nginx.vim'
 Plug 'StanAngeloff/php.vim'
 Plug 'groenewege/vim-less'
@@ -106,6 +106,12 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'evidens/vim-twig'
 
 let mapleader=','
+let php_html_load=0
+let php_html_in_heredoc=0
+let php_html_in_nowdoc=0
+let php_sql_query=0
+let php_sql_heredoc=0
+let php_sql_nowdoc=0
 
 " git
 Plug 'tpope/vim-git'
@@ -161,6 +167,3 @@ filetype plugin indent on
 " tags
 set tags+=tags.vendor
 autocmd BufWritePost *.php silent execute "![ -d src ] && ctags src"
-
-" editor config
-Plug 'editorconfig/editorconfig-vim'
