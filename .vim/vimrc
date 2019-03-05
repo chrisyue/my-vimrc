@@ -84,8 +84,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'gmarik/ingretu'
 
 " code generate
-Plug 'SirVer/ultisnips'
-Plug 'chrisyue/my-snips'
+" Plug 'SirVer/ultisnips'
+" Plug 'chrisyue/my-snips'
 
 " expanding html abbreviations, like zencode
 Plug 'mattn/emmet-vim' 
@@ -126,7 +126,7 @@ Plug 'scrooloose/nerdtree'
 let g:NERDTreeWinSize=60
 let g:NERDTreeAutoDeleteBuffer=1
 
-Plug 'gregsexton/MatchTag'
+" Plug 'gregsexton/MatchTag'
 Plug 'majutsushi/tagbar'
 Plug 'machakann/vim-swap'
 Plug 'Townk/vim-autoclose'
@@ -152,7 +152,7 @@ Plug 'gmarik/sudo-gui.vim'
 Plug 'sjl/gundo.vim'
 
 " debug
-Plug 'joonty/vdebug'
+" Plug 'joonty/vdebug'
 
 " editor config
 Plug 'editorconfig/editorconfig-vim'
@@ -165,5 +165,6 @@ autocmd VimEnter * NERDTree
 filetype plugin indent on
 
 " tags
-set tags+=tags.vendor
-autocmd BufWritePost *.php silent execute "![ -d src ] && ctags src"
+set tags=tags.src,tags.vendor,tags.lib
+autocmd BufWritePost src/*.php silent execute "!ctags -f tags.src src"
+autocmd BufWritePost lib/*.php silent execute "!ctags -f tags.lib lib"

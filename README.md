@@ -8,10 +8,10 @@ HOW TO USE
 
 clone this repository
 
-copy .vimrc and .vim to your home directory
+copy or link .vim to your home directory
 
-    cp .vimrc ~/
-    cp .vim ~/ -R
+    cp .vim ~/
+    # or ln -s .vim ~/
 
 run vim, and type the following command to install all plugins:
 
