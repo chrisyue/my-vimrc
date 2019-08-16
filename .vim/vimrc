@@ -17,11 +17,16 @@ set ignorecase smartcase
 set number
 set cursorline
 
+set ruler
+
 set cindent
 set expandtab shiftround softtabstop=4 shiftwidth=4
 
 set foldmarker={,} foldmethod=marker foldlevel=1
+
 set wildmode=list:longest wildmenu
+
+set completeopt=longest,menu
 
 set hidden
 set autoread autowriteall
@@ -37,33 +42,37 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-" code generate
 Plug 'SirVer/ultisnips'
 Plug 'chrisyue/my-snips'
 
-" expanding html abbreviations, like zencode
-Plug 'mattn/emmet-vim' 
-
-" use omni to complete method
 Plug 'shawncplus/phpcomplete.vim'
+
+Plug 'ycm-core/YouCompleteMe'
+Plug 'zxqfl/tabnine-vim'
 
 Plug 'scrooloose/nerdtree'
 
-Plug 'machakann/vim-swap'
 Plug 'Townk/vim-autoclose'
 Plug '/usr/local/opt/fzf'
 
 Plug 'arnaud-lb/vim-php-namespace'
 
-" comment
 Plug 'tomtom/tlib_vim'
 Plug 'tomtom/tcomment_vim'
+let g:tcomment_maps=0
+
+Plug 'machakann/vim-swap'
 
 call plug#end()
 
 filetype plugin on
 
+colorscheme darkblue
+
 nnoremap <C-S> :grep <cword><CR>
+nnoremap <C-N> :NERDTreeFocus<CR>
+nnoremap <C-K> :TComment<CR>
+vnoremap <C-K> :TComment<CR>
 
 " tags
 set tags=tags.src,tags.vendor,tags.lib

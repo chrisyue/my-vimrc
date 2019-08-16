@@ -1,7 +1,7 @@
-vimrc-for-linux
-===============
+My Vimrc
+========
 
-my vimrc for linux
+Vimrc for mac and linux
 
 HOW TO USE
 ----------
