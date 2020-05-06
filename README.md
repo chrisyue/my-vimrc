@@ -1,17 +1,23 @@
-My Vimrc
+My Vimrc                                                                                                                                                                        
 ========
 
-Vimrc for mac and linux
+vimrc for Mac and Linux
 
 HOW TO USE
 ----------
 
 clone this repository
 
-copy or link .vim to your home directory
+    git clone https://github.com/chrisyue/my-vimrc.git
 
-    cp .vim ~/
-    # or ln -s .vim ~/
+copy `.vim` to your home directory
+
+    cp my-vimrc/.vim ~/ -R
+
+or create a symlink to your home dir
+
+    cd ~
+    ln -s /path/to/my-vimrc/.vim
 
 run vim, and type the following command to install all plugins:
 
