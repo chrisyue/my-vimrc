@@ -47,7 +47,6 @@ Plug 'SirVer/ultisnips'
 Plug 'chrisyue/my-snips'
 
 Plug 'shawncplus/phpcomplete.vim'
-Plug 'ryanoasis/vim-devicons'
 
 Plug 'scrooloose/nerdtree'
 
